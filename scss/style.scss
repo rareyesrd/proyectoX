@@ -1,0 +1,71 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    div{
+        height: 100vh;
+    }
+    .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    @for $i from 1 through 100{
+        .cont-#{$i}{
+            width: $i  + 0%;
+            margin: 0 auto;
+        }
+    }
+     // Extra small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in CMedia
+    @for $i from 1 through 12{
+        .xs#{$i}{
+            flex-basis: (99.5% / 12) * $i;
+        }
+    }
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { 
+        @for $i from 1 through 12{
+            .sm#{$i}{
+                flex-basis: (99.5% / 12) * $i;
+            }
+        }
+    }
+   // Medium devices (tablets, 768px and up)
+   @media (min-width: 768px) { 
+    @for $i from 1 through 12{
+        .md#{$i}{
+            flex-basis: (99.5% / 12) * $i;
+        }
+    }
+    }
+   // Large devices (desktops, 992px and up)
+   @media (min-width: 992px) { 
+    @for $i from 1 through 12{
+        .lg#{$i}{
+            flex-basis: (99.5% / 12) * $i;
+        }
+    }
+    }
+   // Extra large devices (large desktops, 1200px and up)
+   @media (min-width: 1200px) { 
+    @for $i from 1 through 12{
+        .xl#{$i}{
+            flex-basis: (99.5% / 12) * $i;
+        }
+    }
+    }
+}
+
+
+
+
+
+
+
+
+
